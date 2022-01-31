@@ -52,6 +52,9 @@ remove.addEventListener('click', () => {
     // Step 2 -- add code to allow users to remove the most recent stat
     // Hint -- how do you remove an element from an array?
     // Hint -- how can we rerender the stats using a function above?
+    stats.pop();
+    console.log(stats);
+    renderStats();
 });
 
 save.addEventListener('click', () => {
