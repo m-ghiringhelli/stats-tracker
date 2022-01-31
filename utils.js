@@ -6,6 +6,6 @@ export function renderStat(item) {
 
 export function renderGame(game) {
     const li = document.createElement('li');
-    li.textContent = `Game #${game.number} - ${game.totalPoints} Points Scored`;
+    li.textContent = `Game #${game.number} - ${game.score} Points Scored`;
     return li;
 }

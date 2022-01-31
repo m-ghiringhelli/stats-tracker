@@ -53,15 +53,27 @@ remove.addEventListener('click', () => {
     // Hint -- how do you remove an element from an array?
     // Hint -- how can we rerender the stats using a function above?
     stats.pop();
-    console.log(stats);
     renderStats();
 });
 
 save.addEventListener('click', () => {
     // Step 3 - add code to allow users to save the state
     // Loop through the list of stats and add up the total points scored
+    let totalPoints = 0;
+    for (let stat of stats) {
+        let score = + stat.points;
+        totalPoints += score;
+    }
     // Create a new object with the game number and the total points
     // { number: games.length + 1, totalPoints: totalPoints }
+    const game = {
+        number: games.length + 1,
+        score: totalPoints,
+    };
+
     // Push the new object onto the games array then call renderGames
+    games.push(game);
+    renderGames();
     // reset the stats with resetStats
+    resetStats();
 });
