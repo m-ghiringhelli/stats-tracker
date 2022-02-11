@@ -24,7 +24,7 @@ test('renderGame returns an <li>', (expect) => {
 
     //Act
     // Call the function you're testing and set the result to a const
-    const actual = renderGame({ number: 1, totalPoints: 10 });
+    const actual = renderGame({ number: 1, score: 10 });
 
     //Expect
     // Make assertions about what is expected versus the actual result
